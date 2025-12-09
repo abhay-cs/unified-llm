@@ -1,0 +1,30 @@
+{
+    name: "Unified LLM Memory - AI Knowledge Workspace",
+    
+    description: "A unified memory system that imports chat history from multiple LLM platforms (ChatGPT, Claude), extracts structured knowledge facts using AI, and uses RAG (Retrieval-Augmented Generation) to provide context-aware responses. Features vector database storage, knowledge graph visualization, and digital persona generation.",
+    
+    stack: ["Next.js", "React", "TypeScript", "FastAPI", "Python", "Pinecone", "OpenAI API", "NetworkX", "Tailwind CSS"],
+    
+    github: "https://github.com/abhay-cs/unified-llm", // Update with your actual GitHub URL
+    
+    demo: "https://abhaycs.com/unified-llm", // Update with your demo URL if available
+    
+    fullDescription: "Unified LLM Memory is an intelligent knowledge management system that solves the problem of fragmented AI conversation history across multiple platforms. The application allows users to import their chat exports from ChatGPT and Claude, automatically extracts structured facts (preferences, project information, goals) using LLM-powered analysis, and stores them in a vector database for semantic search. The system uses RAG architecture to retrieve relevant context and generate personalized responses based on the user's historical conversations. Additional features include an interactive knowledge graph visualization and automatic generation of a digital persona summary based on extracted facts.",
+    
+    features: [
+        "Multi-platform chat import (ChatGPT, Claude) with extensible importer architecture",
+        "LLM-powered fact extraction with intelligent batching and filtering",
+        "Vector database storage with Pinecone for semantic search",
+        "RAG (Retrieval-Augmented Generation) for context-aware query responses",
+        "Interactive knowledge graph visualization using NetworkX",
+        "Digital persona generation from extracted memory facts",
+        "Modern web interface with real-time import processing",
+        "Factory pattern for service initialization and dependency management",
+        "Mock storage mode for development without external dependencies"
+    ],
+    
+    challenges: "One of the main challenges was designing an efficient fact extraction pipeline that could process large volumes of chat history without overwhelming the LLM API with excessive requests. I solved this by implementing intelligent message filtering (skipping short/greeting messages), batch processing with configurable batch sizes, and async concurrent processing with semaphore-based rate limiting. Another challenge was building a flexible architecture that could work with both cloud (Pinecone) and local mock storage, which required careful abstraction of the vector store interface.",
+    
+    learned: "This project taught me a lot about RAG architecture, vector databases, and semantic search. I gained deep experience with embedding models (sentence-transformers), learned how to structure prompts for fact extraction, and implemented efficient batch processing patterns. I also learned about knowledge graph construction, the Factory design pattern for service management, and how to build a full-stack application with Next.js and FastAPI. The project gave me hands-on experience with async Python programming, API design, and building scalable data processing pipelines."
+}
+
